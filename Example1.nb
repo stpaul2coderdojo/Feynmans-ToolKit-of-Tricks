@@ -1,0 +1,13 @@
+(* Define the partition function at a single temperature and coupling constant *)
+Z[α_, T_] := Exp[β α^2/2]
+β = 1/T
+
+(* Define the sets of temperatures and coupling constants *)
+T = {1, 2, 3}
+A = {0.1, 0.2, 0.3}
+
+(* Compute the partition function for all temperatures and coupling constants *)
+Z[T, A] = Table[Z[α, T], {α, A}, {T, T}]
+
+(* Print the results *)
+Z[T, A]
